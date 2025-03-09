@@ -1,7 +1,7 @@
 # 🍽️ CraveControl: AI-Powered Smart Meal Recommendation System 
 
 ## What is CraveControl?
-CraveControl is an **AI-driven interactive agent** designed to help users find **personalized, healthy meals** based on their cravings, dietary needs, and available ingredients. No more searching for recipes only to realize you're missing half the ingredients! 🚀
+CraveControl is an **AI-driven interactive agent** designed to help users find **personalized, healthy meals** based on their cravings, dietary needs, and available ingredients. No more searching for recipes only to realize you're missing half the ingredients! 
 
 ## How It Works
 1. **User Input**  
