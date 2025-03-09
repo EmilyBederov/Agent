@@ -5,7 +5,7 @@ CraveControl is an **AI-driven interactive agent** designed to help users find *
 
 ## How It Works
 1. **User Input**  
-   - The user provides details such as **height, weight, age, BMI, and caloric needs**.  
+   - The user provides details such as **height, weight, age, available ingridients, gender, and more** - we calculate the BMI, and the users caloric needs and provide the best recipe for him!  
    - They also specify **cravings** (e.g., "I want something cheesy and spicy") and list **available ingredients** in their refrigerator.  
 
 2. **Smart Meal Selection**   
