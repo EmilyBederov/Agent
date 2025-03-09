@@ -97,49 +97,40 @@ Both **recipes** and **reviews** are sourced from **Food.com Recipes and Reviews
 ---
 ## Data & File Overview (In `project_files.zip`)
 This repository contains the dataset and embeddings powering CraveControl.
+Some files were too large to upload here, but can be accessed in the following [link](https://drive.google.com/file/d/1FAwm-5LpsMk7_yczZLc5ihCP6HoqfH7h/view?usp=sharing)
 
-### 1. `env`
-- Contains environment variables required for embedding generation and Pinecone usage.
-- Includes:
-  - `AZURE_OPENAI_API_KEY`: API key for Azure OpenAI.
-  - `EMBEDDINGS_DEPLOYMENT`: Deployment name for embeddings.
-  - `EMBEDDINGS_MODEL_NAME`: Model used for text embedding.
-  - `AZURE_OPENAI_ENDPOINT`: API endpoint.
-  - `EMBEDDINGS_API_VERSION`: API version.
-  - `PINECONE_API_KEY`: API key for Pinecone.
-
-### 2. `final_docs.json`
+### 1. `final_docs.json`
 - Contains **20,000 recipes**.
 - Each recipe is stored as a **LangChain document** with:
   - **Text of the recipe** (used as input for the embedding model).
   - **Metadata** (features of the recipe such as ingredients, category, etc.).
 
-### 3. `final_doc_texts.json`
+### 2. `final_doc_texts.json`
 - A **list of raw text** from each recipe.
 - Extracted directly from `final_docs.json`.
 
-### 4. `embeddings_and_ids.json`
+### 3. `embeddings_and_ids.json`
 - Stores:
   - **Recipe IDs**.
   - **Corresponding embeddings** of **reviews** related to these recipes.
 
-### 5. `embedding_data.json`
+### 4. `embedding_data.json`
 - A list of **text extracted from the reviews**.
 - These reviews were used to generate embeddings.
 
-### 6. `final_summary.json`
+### 5. `final_summary.json`
 - Summarization of each review after being **processed through an LLM**.
 
-### 7. `processed_reviews.json`
+### 6. `processed_reviews.json`
 - Contains **pre-processed reviews** before summarization.
 - This includes cleaning, filtering, and structuring the raw review data.
 
-### 8. `selected_recipe_ids.json`
+### 7. `selected_recipe_ids.json`
 - Contains **the IDs of selected reviews** after preprocessing both:
   - Recipes.
   - Reviews.
 
-### 9. `recipes_final.csv`
+### 8. `recipes_final.csv`
 - A **compiled dataset** containing:
   - Recipes with corresponding reviews.
   - Additional recipes that were reviewed.
