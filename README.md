@@ -70,6 +70,31 @@ This project consists of **five Jupyter notebooks**, each handling a critical st
 
 These notebooks work together to make CraveControl an **efficient and intelligent meal recommendation system**! 
 ---
+## Dataset Sources
+
+The datasets used in this project can be accessed and downloaded from Kaggle.
+
+### **Recipes & Reviews Dataset**
+Both **recipes** and **reviews** are sourced from **Food.com Recipes and Reviews**, available on Kaggle.
+
+- **Download & Extract Dataset** 
+  ```python
+  import os
+  import kagglehub
+
+  # Download the latest version
+  path = kagglehub.dataset_download("irkaal/foodcom-recipes-and-reviews")
+
+  # Get all CSV files
+  csv_files = [f for f in os.listdir(path) if f.endswith('.csv')]
+
+  # Assign paths for recipes and reviews
+  recipes_file_path = os.path.join(path, csv_files[1])  # Recipes CSV
+  reviews_file_path = os.path.join(path, csv_files[0])  # Reviews CSV
+
+  print("Recipes file:", recipes_file_path)
+  print("Reviews file:", reviews_file_path)
+---
 ## Data & File Overview (In `project_files.zip`)
 This repository contains the dataset and embeddings powering CraveControl.
 
