@@ -55,15 +55,15 @@ This project consists of **five Jupyter notebooks**, each handling a critical st
    - Displays the **best recipe matches**, including **images and relevant details**.
 
      ### **User Interface Components**
-- **`display.py`** 🎨  
+- **`display.py`** 
   - Contains code that **displays results in a user-friendly way**.  
   - Provides a function that, given a **dictionary of results**, **formats and presents them cleanly**.
 
-- **`pipeline.py`** 🔄  
+- **`pipeline.py`**   
   - Serves as a **wrapper for the main notebook**, consolidating the entire pipeline into a function called **`run()`**.  
   - This function **takes user input, runs the full pipeline, and returns a dictionary of results**.
 
-- **`user.ipynb`** 💡  
+- **`user.ipynb`**  
   - The **interactive notebook** that ties everything together.  
   - Uses functions from **`display.py`** and **`pipeline.py`** to provide an **intuitive way for users to interact with the system**.
 
