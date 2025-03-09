@@ -1,4 +1,4 @@
-# 🍽️ CraveControl: AI-Powered Smart Meal Recommendation System 🤖
+# 🍽️ CraveControl: AI-Powered Smart Meal Recommendation System 
 
 ## What is CraveControl?
 CraveControl is an **AI-driven interactive agent** designed to help users find **personalized, healthy meals** based on their cravings, dietary needs, and available ingredients. No more searching for recipes only to realize you're missing half the ingredients! 🚀
@@ -13,7 +13,7 @@ CraveControl is an **AI-driven interactive agent** designed to help users find *
    - It then searches for recipes that **match the user’s cravings** while ensuring they are **nutritionally balanced**.  
    - The system **filters recipes based on available ingredients**, ensuring the user can cook without needing extra grocery shopping.
 
-3. **AI-Driven Recommendations** 🧠
+3. **AI-Driven Recommendations** 
    - Uses **embeddings and vector search** (Pinecone) to find the **most relevant recipes**.  
    - Retrieves recipes that are **healthy, satisfying, and convenient**.  
    - Leverages **LLMs to summarize and rank reviews**, ensuring the user gets **highly-rated** meal options.
@@ -113,4 +113,5 @@ This repository contains the dataset and embeddings powering CraveControl.
 
 ---
 
-This repository supports the **AI-driven meal recommendation system** by efficiently matching recipes with user preferences using embeddings. 🚀🍽️
+This repository supports the **AI-driven meal recommendation system** by efficiently matching recipes with user preferences using embeddings combininnin knowledge about the reviews of the recepies while choosing the match
+. 
