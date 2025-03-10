@@ -143,5 +143,5 @@ Some files were too large to upload here, but can be accessed in the following [
 
 ---
 
-This repository supports the **AI-driven meal recommendation system** by efficiently matching recipes with user preferences using embeddings combininnin knowledge about the reviews of the recepies while choosing the match
+This repository supports the **AI-driven meal recommendation system** by efficiently matching recipes with user preferences using embeddings combininning knowledge about the reviews of the recepies while choosing the match
 . 
