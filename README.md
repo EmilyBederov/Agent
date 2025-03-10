@@ -49,23 +49,23 @@ This project consists of **five Jupyter notebooks**, each handling a critical st
    - **Calculates the top recipes** by matching user cravings, caloric needs, and available ingredients.  
    - Implements an **LLM-powered chain** to generate intelligent meal recommendations.
 
-5. **User-Friendly Interface Notebook**  
+5. **User-Friendly Interface directoy**  
    - The **final, ready-to-use notebook** for end users.  
    - Allows users to **input their cravings, available ingredients, and dietary needs**.  
    - Displays the **best recipe matches**, including **images and relevant details**.
 
      ### **User Interface Components**
-- **`display.py`** 
-  - Contains code that **displays results in a user-friendly way**.  
-  - Provides a function that, given a **dictionary of results**, **formats and presents them cleanly**.
-
-- **`pipeline.py`**   
-  - Serves as a **wrapper for the main notebook**, consolidating the entire pipeline into a function called **`run()`**.  
-  - This function **takes user input, runs the full pipeline, and returns a dictionary of results**.
-
-- **`user.ipynb`**  
-  - The **interactive notebook** that ties everything together.  
-  - Uses functions from **`display.py`** and **`pipeline.py`** to provide an **intuitive way for users to interact with the system**.
+      - **`display.py`** 
+        - Contains code that **displays results in a user-friendly way**.  
+        - Provides a function that, given a **dictionary of results**, **formats and presents them cleanly**.
+      
+      - **`pipeline.py`**   
+        - Serves as a **wrapper for the main notebook**, consolidating the entire pipeline into a function called **`run()`**.  
+        - This function **takes user input, runs the full pipeline, and returns a dictionary of results**.
+      
+      - **`user.ipynb`**  
+        - The **interactive notebook** that ties everything together.  
+        - Uses functions from **`display.py`** and **`pipeline.py`** to provide an **intuitive way for users to interact with the system**.
 
 
 These notebooks work together to make CraveControl an **efficient and intelligent meal recommendation system**! 
