@@ -54,7 +54,7 @@ This project consists of **five Jupyter notebooks**, each handling a critical st
    - Allows users to **input their cravings, available ingredients, and dietary needs**.  
    - Displays the **best recipe matches**, including **images and relevant details**.
 
-     ### **User Interface Components**
+     ##### **User Interface Components**
       - **`display.py`** 
         - Contains code that **displays results in a user-friendly way**.  
         - Provides a function that, given a **dictionary of results**, **formats and presents them cleanly**.
