@@ -12,9 +12,9 @@ Each section includes the **user input** and the **top 3 recipe suggestions** di
 
 **Suggested Recipes:**
 
-1. ![Recipe 1](./example1_recipe1.png)
-2. ![Recipe 2](./example1_recipe2.png)
-3. ![Recipe 3](./example1_recipe3.png)
+1. ![Recipe 1](./pics/example1_recipe1.png)
+2. ![Recipe 2](./pics/example1_recipe2.png)
+3. ![Recipe 3](./pics/example1_recipe3.png)
 
 ---
 
