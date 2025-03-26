@@ -25,9 +25,9 @@ Each section includes the **user input** and the **top 3 recipe suggestions** di
 
 **Suggested Recipes:**
 
-1. ![Recipe 1](./example2_recipe1.png)
-2. ![Recipe 2](./example2_recipe2.png)
-3. ![Recipe 3](./example2_recipe3.png)
+1. ![Recipe 1](./pics/example2_recipe1.png)
+2. ![Recipe 2](./pics/example2_recipe2.png)
+3. ![Recipe 3](./pics/example2_recipe3.png)
 
 ---
 
@@ -38,9 +38,9 @@ Each section includes the **user input** and the **top 3 recipe suggestions** di
 
 **Suggested Recipes:**
 
-1. ![Recipe 1](./example3_recipe1.png)
-2. ![Recipe 2](./example3_recipe2.png)
-3. ![Recipe 3](./example3_recipe3.png)
+1. ![Recipe 1](./pics/example3_recipe1.png)
+2. ![Recipe 2](./pics/example3_recipe2.png)
+3. ![Recipe 3](./pics/example3_recipe3.png)
 
 ---
 
