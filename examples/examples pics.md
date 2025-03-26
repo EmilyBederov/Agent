@@ -21,7 +21,8 @@ Each section includes the **user input** and the **top 3 recipe suggestions** di
 ## 🍽️ Example 2
 
 **User Input:**  
-*Add your second user query here...*
+*"Hey! im 15 years old, weight 63 kg, and I'm 163. I'm a male and I work out 3 times a week. I want to have a breakfastwith pancakes. I have fruits at home."*
+*
 
 **Suggested Recipes:**
 
@@ -34,7 +35,7 @@ Each section includes the **user input** and the **top 3 recipe suggestions** di
 ## 🍽️ Example 3
 
 **User Input:**  
-*Add your third user query here...*
+*"whats app crave control!! im so hungry, i want chicken for lunch, i wheight 78kg and im 180cm. im 27, and i have paprika. i love working out 6 times a week, and i love cheese."*
 
 **Suggested Recipes:**
 
