@@ -44,5 +44,3 @@ Each section includes the **user input** and the **top 3 recipe suggestions** di
 3. ![Recipe 3](./pics/example3_recipe3.png)
 
 ---
-
-📝 *To update this file, simply drag your PNG images into the `examples` folder, rename them to match the placeholders (or adjust the paths above), and edit the user input text as needed.*
