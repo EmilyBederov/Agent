@@ -90,7 +90,6 @@ This demo file ties together all components: parsing, LLM chains, vector search,
 5. **Run the main agent**
    ```bash
    python Crave_Control_Demo.py
-  	
 ---
 ## `examples/` Directory
 
