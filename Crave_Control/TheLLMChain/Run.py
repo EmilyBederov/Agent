@@ -7,16 +7,32 @@ from TheLLMChain.LLMChainImports import *
 from Agents.Chat import Chat
 from Agents.Embedder import Embedder
 from TheLLMChain.AllLLMChain import AllLLMChain
+import json
+import gdown
 
 
 class Run:
-    def __init__(self):
-         # Build absolute path to the file
-        file_path = os.path.join(os.path.dirname(__file__), "..", "embeddings_and_ids.json")
-        file_path = os.path.abspath(file_path)
+   
+    def __init__(self, google_drive_file_id='1mD1Vqg-khXoVhX4OW6sOhMrVugbRdS6T'):
+        # File to be downloaded if not exists
+        local_file_path = os.path.join(os.path.dirname(__file__), "..", "embeddings_and_ids.json")
+        local_file_path = os.path.abspath(local_file_path)
+
+        # Check if file exists, if not download from Google Drive
+        if not os.path.exists(local_file_path):
+            try:
+                # Google Drive download URL
+                url = f'https://drive.google.com/uc?id={google_drive_file_id}'
+                
+                # Download the file
+                gdown.download(url, local_file_path, quiet=False)
+                print(f"Successfully downloaded embeddings file to {local_file_path}")
+            except Exception as e:
+                print(f"Error downloading file from Google Drive: {e}")
+                raise
 
         # Open using the absolute path
-        with open(file_path, "r") as f:
+        with open(local_file_path, "r") as f:
             self.embeddings_and_ids = json.load(f)
 
         self.Chat = Chat()
@@ -106,12 +122,6 @@ class Run:
         vector_ids = [int(recipe_id) for recipe_id in top_3_recipe_ids]
 
         # print(f"Top 3 Recipe IDs: {vector_ids}")
-
-        # # Download latest version
-        # path = kagglehub.dataset_download("irkaal/foodcom-recipes-and-reviews")
-        # csv_files = [f for f in os.listdir(path) if f.endswith('.csv')]
-        # recipes_file_path = os.path.join(path, csv_files[1])
-        # df = pd.read_csv(recipes_file_path)
 
         path = kagglehub.dataset_download("irkaal/foodcom-recipes-and-reviews")
 
