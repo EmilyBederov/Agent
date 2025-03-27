@@ -77,4 +77,20 @@ Each section includes the **user input** and the **top 3 recipe suggestions** di
 2. ![Recipe 2](./pics/example3_recipe2.png)
 3. ![Recipe 3](./pics/example3_recipe3.png)
 
+**FeedBack:**
+**Would you like to give feedback on the recipe?**  
+`(yes/no):` **yes**
+
+**Feedback Time!**  
+**Any ingredients you'd like to ADD?**  
+`rice`
+
+**Any ingredients you'd like to REMOVE?**  
+`potatos`
+
+**Suggested Recipes:**
+
+1. ![Recipe 1](./pics/feedback3ex1.png)
+2. ![Recipe 2](./pics/feedback3ex2.png)
+3. ![Recipe 3](./pics/feedback3ex3.png)
 ---
