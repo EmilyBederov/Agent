@@ -8,16 +8,16 @@ Each section includes the **user input** and the **top 3 recipe suggestions** di
 ## 🍽️ Example 1
 
 **User Input:**  
-```
+
 *"I'm daniel 33 years old, weight 50 kg, and I'm 170cm tall.I'm female and I work out 6 times a week.I want a heavy dinner with bagel with bacon, egg and cheese.I have ham and bagel and tomato in my fridge"*
-```
+
 **Suggested Recipes:**
 
 1. ![Recipe 1](./pics/example1_recipe1.png)
 2. ![Recipe 2](./pics/example1_recipe2.png)
 3. ![Recipe 3](./pics/example1_recipe3.png)
 
-```
+
 **FeedBack:**
 **Would you like to give feedback on the recipe?**  
 `(yes/no):` **yes**
@@ -28,7 +28,7 @@ Each section includes the **user input** and the **top 3 recipe suggestions** di
 
 **Any ingredients you'd like to REMOVE?**  
 `egg`
-```
+
 **Suggested Recipes:**
 
 1. ![Recipe 1](./pics/feedback1ex1.png)
@@ -40,9 +40,8 @@ Each section includes the **user input** and the **top 3 recipe suggestions** di
 ## 🍽️ Example 2
 
 **User Input:**  
-```
+
 *"Hey! im 15 years old, weight 63 kg, and I'm 163. I'm a male and I work out 3 times a week. I want to have a breakfastwith pancakes. I have fruits at home."*
-```
 
 **Suggested Recipes:**
 
