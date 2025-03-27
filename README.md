@@ -64,6 +64,7 @@ This is the main entry point to the system. When run:
 - Offers the user an option to give feedback and modifies the results accordingly.
 
 This demo file ties together all components: parsing, LLM chains, vector search, and feedback into one seamless experience.
+
 ---
 
 ## Usage - How to Clone & Run the Project
@@ -72,18 +73,22 @@ This demo file ties together all components: parsing, LLM chains, vector search,
    ```bash
    git clone https://github.com/your-username/CraveControl.git
    cd CraveControl
-2.	**Create a virtual environment**
+2. **Create a virtual environment**
+   ```bash
    python -m venv .venv
    source .venv/bin/activate   # For Mac/Linux
    .venv\Scripts\activate      # For Windows
-3.	**Install dependencies**
+3. **Install dependencies**
+```bash
 	pip install -r requirements.txt
-4.	**Set up your .env file**
+4. **Set up your .env file**
    The repo includes a placeholder .env:
-  	AZURE_OPENAI_API_KEY='your_api_key'
+```bash
+   AZURE_OPENAI_API_KEY='your_api_key'
    PINECONE_API_KEY='your_pinecone_key'
   	Replace the values with your actual keys
-5.	**Run the main agent**
+5. **Run the main agent**
+  ```bash
    python Crave_Control_Demo.py
   	
 ---
@@ -95,6 +100,7 @@ The `examples/` folder includes:
 - `.html` file: Rendered result page with the recommended recipes.
 
 These examples demonstrate how CraveControl responds to **real user preferences**.
+
 ---
 
 ## Project Structure: Five Key Notebooks
@@ -120,6 +126,7 @@ This project consists of **five Jupyter notebooks**, each handling a critical st
    - Implements an **LLM-powered chain** to generate intelligent meal recommendations.
 
 Together, these notebooks provide the essential building blocks for CraveControl’s intelligent recommendation pipeline
+
 ---
 
 ## Dataset Sources
