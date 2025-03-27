@@ -18,7 +18,7 @@ Each section includes the **user input** and the **top 3 recipe suggestions** di
 3. ![Recipe 3](./pics/example1_recipe3.png)
 
 
-**FeedBack:**
+### FeedBack:
 **Would you like to give feedback on the recipe?**  
 `(yes/no):` **yes**
 
@@ -49,7 +49,7 @@ Each section includes the **user input** and the **top 3 recipe suggestions** di
 2. ![Recipe 2](./pics/example2_recipe2.png)
 3. ![Recipe 3](./pics/example2_recipe3.png)
 
-**FeedBack:**
+### FeedBack:
 **Would you like to give feedback on the recipe?**  
 `(yes/no):` **yes**
 
@@ -79,7 +79,7 @@ Each section includes the **user input** and the **top 3 recipe suggestions** di
 2. ![Recipe 2](./pics/example3_recipe2.png)
 3. ![Recipe 3](./pics/example3_recipe3.png)
 
-**FeedBack:**
+### FeedBack:
 **Would you like to give feedback on the recipe?**  
 `(yes/no):` **yes**
 
