@@ -26,7 +26,7 @@ CraveControl is an **AI-driven interactive agent** designed to help users find *
 **Fast & Smart Retrieval** – Uses **state-of-the-art embeddings & AI-powered search** for **quick meal recommendations**.
 
 ---
-## Project Structure: Five Key Notebooks 
+## Project Structure: Five Key Notebooks + Autonomic Agent
 
 This project consists of **five Jupyter notebooks**, each handling a critical step in the CraveControl pipeline:
 
@@ -70,6 +70,68 @@ This project consists of **five Jupyter notebooks**, each handling a critical st
 
 These notebooks work together to make CraveControl an **efficient and intelligent meal recommendation system**! 
 ---
+## Autonomous Agent:
+
+The core of CraveControl is an autonomous agent that:
+- Interprets raw user input in natural language.
+- Extracts relevant information like age, weight, height, activity level, cravings, and ingredients.
+- Calculates BMI, classifies it, estimates TDEE, and computes ideal calorie intake per meal.
+- Makes decisions across multiple steps to ensure personalized, healthy, and satisfying recommendations without requiring manual intervention.
+
+## RAG Agent
+
+CraveControl uses a Retrieval-Augmented Generation (RAG) approach:
+- Retrieves the top 20 recipes from a vector database (Pinecone) using embeddings of the generated query.
+- Reranks those recipes using embedded review data to incorporate user satisfaction and quality.
+- Combines the strengths of vector similarity and real user feedback to select the top 3 recipes.
+- Uses LangChain and LLM chains to create structured prompts and refined queries based on user data.
+
+## Feedback Agent
+
+CraveControl now supports a dynamic feedback loop that allows users to refine recipe suggestions based on preferred ingredients.
+
+### How It Works
+
+- After getting a recipe recommendation, the user is asked:
+  > Would you like to give feedback on the recipe?
+
+- If yes, they can specify:
+  - Ingredients they want to remove
+  - Ingredients they want to add
+
+- The agent updates the structured input by modifying the `included_ingredients` field and reruns the recommendation engine with the updated input.
+
+- This feedback loop can repeat multiple times until the user is satisfied.
+
+The system also prints a comparison:
+- Ingredients kept
+- Ingredients added
+- Ingredients removed
+
+This makes the feedback process transparent and interpretable.
+
+## Crave_Control_Demo
+
+This is the main entry point to the system. When run:
+- It prompts the user for input through a friendly system message.
+- Parses and processes the input.
+- Runs the full recipe recommendation pipeline.
+- Displays the top recipe suggestions in a clean, visual HTML format.
+- Offers the user an option to give feedback and modifies the results accordingly.
+
+This demo file ties together all components: parsing, LLM chains, vector search, and feedback into one seamless experience.
+---
+## 📂 `examples/` Directory
+
+The `examples/` folder includes:
+- **3 example runs** of CraveControl with user input + feedback flow.
+- Each example contains:
+  - `.html` file: Rendered result page with the recommended recipes.
+  - `README.md`: Describes the user input, feedback, and resulting changes.
+
+These examples demonstrate how CraveControl responds to **real user preferences**.
+---
+
 ## Dataset Sources
 
 The datasets used in this project can be accessed and downloaded from Kaggle.
