@@ -56,7 +56,7 @@ Each section includes the **user input** and the **top 3 recipe suggestions** di
 `chocolate`
 
 **Any ingredients you'd like to REMOVE?**  
-`egg`
+`bannana`
 
 **Suggested Recipes:**
 
