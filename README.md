@@ -19,7 +19,7 @@ CraveControl is an **AI-driven interactive agent** designed to help users find *
    - Leverages **LLMs to summarize and rank reviews**, ensuring the user gets **highly-rated** meal options.
      
 4. **FeedBack**
-   - the user can add or remov ingrideintes based on his personal prefrences
+   - The user can add or remove ingredients based on their personal preferences.
 
 ## Why Use CraveControl?  
 **Personalized Nutrition** – Meals are tailored to the user’s BMI and caloric needs.  
