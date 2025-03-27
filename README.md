@@ -79,11 +79,11 @@ This demo file ties together all components: parsing, LLM chains, vector search,
    source .venv/bin/activate   # For Mac/Linux
    .venv\Scripts\activate      # For Windows
 3. **Install dependencies**
-```bash
+   ```bash
 	pip install -r requirements.txt
 4. **Set up your .env file**
    The repo includes a placeholder .env:
-```bash
+   ```bash
    AZURE_OPENAI_API_KEY='your_api_key'
    PINECONE_API_KEY='your_pinecone_key'
   	Replace the values with your actual keys
