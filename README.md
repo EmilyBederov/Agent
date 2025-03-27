@@ -87,6 +87,7 @@ This demo file ties together all components: parsing, LLM chains, vector search,
    ```bash
    AZURE_OPENAI_API_KEY='your_api_key'
    PINECONE_API_KEY='your_pinecone_key'
+   ```
    Replace the values with your actual keys
 5. **Run the main agent**
    ```bash
