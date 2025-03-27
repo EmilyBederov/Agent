@@ -16,6 +16,23 @@ Each section includes the **user input** and the **top 3 recipe suggestions** di
 2. ![Recipe 2](./pics/example1_recipe2.png)
 3. ![Recipe 3](./pics/example1_recipe3.png)
 
+**FeedBack:**
+**Would you like to give feedback on the recipe?**  
+`(yes/no):` **yes**
+
+**Feedback Time!**  
+**Any ingredients you'd like to ADD?**  
+`cucamber`
+
+**Any ingredients you'd like to REMOVE?**  
+`egg`
+
+**Suggested Recipes:**
+
+1. ![Recipe 1](./pics/feedback1ex1.png)
+2. ![Recipe 2](./pics/feedback1ex2.png)
+3. ![Recipe 3](./pics/feedback1ex3.png)
+
 ---
 
 ## 🍽️ Example 2
@@ -29,6 +46,23 @@ Each section includes the **user input** and the **top 3 recipe suggestions** di
 1. ![Recipe 1](./pics/example2_recipe1.png)
 2. ![Recipe 2](./pics/example2_recipe2.png)
 3. ![Recipe 3](./pics/example2_recipe3.png)
+
+**FeedBack:**
+**Would you like to give feedback on the recipe?**  
+`(yes/no):` **yes**
+
+**Feedback Time!**  
+**Any ingredients you'd like to ADD?**  
+`chocolate`
+
+**Any ingredients you'd like to REMOVE?**  
+`egg`
+
+**Suggested Recipes:**
+
+1. ![Recipe 1](./pics/feedback2ex1.png)
+2. ![Recipe 2](./pics/feedback2ex2.png)
+3. ![Recipe 3](./pics/feedback2ex3.png)
 
 ---
 
