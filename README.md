@@ -17,6 +17,9 @@ CraveControl is an **AI-driven interactive agent** designed to help users find *
    - Uses **embeddings and vector search** (Pinecone) to find the **most relevant recipes**.  
    - Retrieves recipes that are **healthy, satisfying, and convenient**.  
    - Leverages **LLMs to summarize and rank reviews**, ensuring the user gets **highly-rated** meal options.
+     
+4. **FeedBack**
+   - the user can add or remov ingrideintes based on his personal prefrences
 
 ## Why Use CraveControl?  
 **Personalized Nutrition** – Meals are tailored to the user’s BMI and caloric needs.  
@@ -26,8 +29,75 @@ CraveControl is an **AI-driven interactive agent** designed to help users find *
 **Fast & Smart Retrieval** – Uses **state-of-the-art embeddings & AI-powered search** for **quick meal recommendations**.
 
 ---
-## Project Structure: Five Key Notebooks + Autonomic Agent
 
+## Autonomous Agent:
+
+The core of CraveControl is an autonomous agent that:
+- Interprets raw user input in natural language.
+- Extracts relevant information like age, weight, height, activity level, cravings, and ingredients.
+- Calculates BMI, classifies it, estimates TDEE, and computes ideal calorie intake per meal.
+- Makes decisions across multiple steps to ensure personalized, healthy, and satisfying recommendations without requiring manual intervention.
+
+## RAG Agent
+
+CraveControl uses a Retrieval-Augmented Generation (RAG) approach:
+- Retrieves the top 20 recipes from a vector database (Pinecone) using embeddings of the generated query.
+- Reranks those recipes using embedded review data to incorporate user satisfaction and quality.
+- Combines the strengths of vector similarity and real user feedback to select the top 3 recipes.
+- Uses LangChain and LLM chains to create structured prompts and refined queries based on user data.
+
+## Feedback Agent
+
+- After receiving recommendations, the user can refine results by **adding or removing ingredients** based on personal preferences.  
+- The system dynamically updates the input and reruns the recipes search until the user is satisfied.
+
+## Crave_Control_Demo
+
+This is the main entry point to the system. When run:
+- It prompts the user for input through a friendly system message.
+- Parses and processes the input.
+- Runs the full recipe recommendation pipeline.
+- Displays the top recipe suggestions in a clean, visual HTML format.
+     - **`Display_All`:** 
+     - Contains code that **displays results in a user-friendly way**.  
+     - Provides a function that, given a **dictionary of results**, **formats and presents them cleanly**.
+- Offers the user an option to give feedback and modifies the results accordingly.
+
+This demo file ties together all components: parsing, LLM chains, vector search, and feedback into one seamless experience.
+---
+
+## Usage - How to Clone & Run the Project
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/CraveControl.git
+   cd CraveControl
+2.	**Create a virtual environment**
+   python -m venv .venv
+   source .venv/bin/activate   # For Mac/Linux
+   .venv\Scripts\activate      # For Windows
+3.	**Install dependencies**
+	pip install -r requirements.txt
+4.	**Set up your .env file**
+   The repo includes a placeholder .env:
+  	AZURE_OPENAI_API_KEY='your_api_key'
+   PINECONE_API_KEY='your_pinecone_key'
+  	Replace the values with your actual keys
+5.	**Run the main agent**
+   python Crave_Control_Demo.py
+  	
+---
+## `examples/` Directory
+
+The `examples/` folder includes:
+- **3 example runs** of CraveControl with user input + feedback flow.
+- `README.md`: Describes the user input, feedback, and resulting changes, as the way the user gets the recepies.
+- `.html` file: Rendered result page with the recommended recipes.
+
+These examples demonstrate how CraveControl responds to **real user preferences**.
+---
+
+## Project Structure: Five Key Notebooks
 This project consists of **five Jupyter notebooks**, each handling a critical step in the CraveControl pipeline:
 
 1. **Recipe Pre-Processing Notebook**   
@@ -49,87 +119,7 @@ This project consists of **five Jupyter notebooks**, each handling a critical st
    - **Calculates the top recipes** by matching user cravings, caloric needs, and available ingredients.  
    - Implements an **LLM-powered chain** to generate intelligent meal recommendations.
 
-5. **User-Friendly Interface directoy**  
-   - The **final, ready-to-use notebook** for end users.  
-   - Allows users to **input their cravings, available ingredients, and dietary needs**.  
-   - Displays the **best recipe matches**, including **images and relevant details**.
-
-     ##### **User Interface Components**
-      - **`display.py`** 
-        - Contains code that **displays results in a user-friendly way**.  
-        - Provides a function that, given a **dictionary of results**, **formats and presents them cleanly**.
-      
-      - **`pipeline.py`**   
-        - Serves as a **wrapper for the main notebook**, consolidating the entire pipeline into a function called **`run()`**.  
-        - This function **takes user input, runs the full pipeline, and returns a dictionary of results**.
-      
-      - **`user.ipynb`**  
-        - The **interactive notebook** that ties everything together.  
-        - Uses functions from **`display.py`** and **`pipeline.py`** to provide an **intuitive way for users to interact with the system**.
-
-
-These notebooks work together to make CraveControl an **efficient and intelligent meal recommendation system**! 
----
-## Autonomous Agent:
-
-The core of CraveControl is an autonomous agent that:
-- Interprets raw user input in natural language.
-- Extracts relevant information like age, weight, height, activity level, cravings, and ingredients.
-- Calculates BMI, classifies it, estimates TDEE, and computes ideal calorie intake per meal.
-- Makes decisions across multiple steps to ensure personalized, healthy, and satisfying recommendations without requiring manual intervention.
-
-## RAG Agent
-
-CraveControl uses a Retrieval-Augmented Generation (RAG) approach:
-- Retrieves the top 20 recipes from a vector database (Pinecone) using embeddings of the generated query.
-- Reranks those recipes using embedded review data to incorporate user satisfaction and quality.
-- Combines the strengths of vector similarity and real user feedback to select the top 3 recipes.
-- Uses LangChain and LLM chains to create structured prompts and refined queries based on user data.
-
-## Feedback Agent
-
-CraveControl now supports a dynamic feedback loop that allows users to refine recipe suggestions based on preferred ingredients.
-
-### How It Works
-
-- After getting a recipe recommendation, the user is asked:
-  > Would you like to give feedback on the recipe?
-
-- If yes, they can specify:
-  - Ingredients they want to remove
-  - Ingredients they want to add
-
-- The agent updates the structured input by modifying the `included_ingredients` field and reruns the recommendation engine with the updated input.
-
-- This feedback loop can repeat multiple times until the user is satisfied.
-
-The system also prints a comparison:
-- Ingredients kept
-- Ingredients added
-- Ingredients removed
-
-This makes the feedback process transparent and interpretable.
-
-## Crave_Control_Demo
-
-This is the main entry point to the system. When run:
-- It prompts the user for input through a friendly system message.
-- Parses and processes the input.
-- Runs the full recipe recommendation pipeline.
-- Displays the top recipe suggestions in a clean, visual HTML format.
-- Offers the user an option to give feedback and modifies the results accordingly.
-
-This demo file ties together all components: parsing, LLM chains, vector search, and feedback into one seamless experience.
----
-## 📂 `examples/` Directory
-
-The `examples/` folder includes:
-- **3 example runs** of CraveControl with user input + feedback flow.
-- Each example contains:
-  - `.html` file: Rendered result page with the recommended recipes.
-  - `README.md`: Describes the user input, feedback, and resulting changes.
-
-These examples demonstrate how CraveControl responds to **real user preferences**.
+Together, these notebooks provide the essential building blocks for CraveControl’s intelligent recommendation pipeline
 ---
 
 ## Dataset Sources
@@ -198,11 +188,10 @@ Some files were too large to upload here, but can be accessed in the following [
   - Additional recipes that were reviewed.
   - This dataset is the **final version** used for embeddings and retrieval.
 
-## Usage
+---
 - The dataset can be used for **retrieval-augmented generation (RAG)** for recipe recommendations.
 - Pinecone is used for **efficient similarity search** based on embeddings.
 - The summarized reviews help in **ranking recipes** for user preferences.
-
 ---
 
 This repository supports the **AI-driven meal recommendation system** by efficiently matching recipes with user preferences using embeddings combininning knowledge about the reviews of the recepies while choosing the match
