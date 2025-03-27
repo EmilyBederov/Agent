@@ -72,6 +72,7 @@ This demo file ties together all components: parsing, LLM chains, vector search,
 1. **Clone the repository**
    ```bash
    git clone https://github.com/your-username/CraveControl.git
+   cd Agent
    cd CraveControl
 2. **Create a virtual environment**
    ```bash
@@ -86,7 +87,7 @@ This demo file ties together all components: parsing, LLM chains, vector search,
    ```bash
    AZURE_OPENAI_API_KEY='your_api_key'
    PINECONE_API_KEY='your_pinecone_key'
-  	Replace the values with your actual keys
+   Replace the values with your actual keys
 5. **Run the main agent**
    ```bash
    python Crave_Control_Demo.py
