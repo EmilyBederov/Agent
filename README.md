@@ -88,7 +88,7 @@ This demo file ties together all components: parsing, LLM chains, vector search,
    PINECONE_API_KEY='your_pinecone_key'
   	Replace the values with your actual keys
 5. **Run the main agent**
-  ```bash
+   ```bash
    python Crave_Control_Demo.py
   	
 ---
